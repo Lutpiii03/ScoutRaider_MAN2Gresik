@@ -1,0 +1,547 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4B0082, #1C2526); /* Gradien ungu ke hitam */
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#logo {
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Navigation */
+nav {
+    background: #4B0082;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav a i {
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+nav a:hover, nav a:focus {
+    color: #D3D3D3;
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+nav a.active {
+    color: #D3D3D3;
+}
+
+nav a.active:not([href="index.html"]) {
+    border-bottom: 2px solid #D3D3D3;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 100px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h2#structure-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-title-top {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.hero-title-bottom {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* Card Styling */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 50% 25%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card video {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #D3D3D3;
+    margin: 0.5rem 0;
+}
+
+.card a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #D3D3D3;
+    text-decoration: underline;
+}
+
+.card a[href*="youtube.com"], .card a[href*="youtu.be"] {
+    color: #FFFFFF;
+}
+
+.card a[href*="maps.app.goo.gl"], .card a[href*="google.com/maps"] {
+    color: #FFFFFF;
+}
+
+.card a[href*="instagram.com"], .card a[href*="tiktok.com"], .card a[href^="mailto:"], .card a[href^="tel:"] {
+    color: #FFFFFF;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: 5% auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.modal-content.zoomable {
+    cursor: zoom-in;
+}
+
+.modal-content.zoomed {
+    cursor: zoom-out;
+    transform: scale(2);
+    transition: transform 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #D3D3D3;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Learn More Link Styling */
+.learn-more {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.learn-more:hover {
+    color: #D3D3D3;
+}
+
+/* Back Arrow Styling */
+.back-arrow {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-arrow:hover, .back-arrow:focus {
+    color: #D3D3D3;
+    transform: translateX(-5px);
+}
+
+/* Footer */
+footer {
+    background: #4B0082;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: #FFFFFF;
+    font-size: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover, .social-icon:focus {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+/* Struktur Page Styles */
+.structure-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.structure-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.structure-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 20%; /* Fokus pada wajah */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.structure-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.structure-card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.group-photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* New Styles from Inline CSS */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4B0082;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.cta-button:hover, .cta-button:focus {
+    background-color: #FFFFFF;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 10px 10px 120px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    h2#materi-title, h2#structure-title {
+        font-size: 2rem;
+    }
+
+    .card-grid, .structure-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card img, .structure-card img {
+        max-height: 150px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .structure-card {
+        padding: 15px;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .social-icon {
+        font-size: 25px;
+    }
+
+    .back-arrow {
+        font-size: 1.2rem;
+    }
+
+    .modal-content {
+        margin: 15% auto;
+        max-width: 95%;
+    }
+
+    .learn-more {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 10px 0;
+    }
+
+    #logo {
+        width: 80px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 5px 5px 100px;
+    }
+
+    section {
+        padding: 15px 5px;
+    }
+
+    h2#structure-title {
+        font-size: 1.5rem;
+    }
+
+    .card img, .structure-card img {
+        max-height: 120px;
+    }
+
+    .card h3, .structure-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p, .structure-card p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .footer-social {
+        gap: 10px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .learn-more {
+        font-size: 0.8rem;
+        padding: 3px 6px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 3px;
+    }
+}
